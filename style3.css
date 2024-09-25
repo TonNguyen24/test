@@ -1,0 +1,166 @@
+body {
+   background-color: black;
+   padding: 3rem;
+   overflow: hidden;
+   font-family: "Noto Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+}
+
+canvas {
+   justify-items: center;
+   border: 0.005rem solid rgb(255, 255, 255);
+}
+
+h1 {
+   color: white;
+   font-size: 0.8rem;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+.chat_box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 40rem;
+   background: #e3e3e3;
+   padding: 0.5rem;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+   border: 0.1rem solid black;
+   position: absolute;
+   bottom: 2.5rem; /* Keeps it 3rem from the bottom */
+   left: 50%;
+   transform: translateX(-50%); /* Centers the box horizontally */
+}
+
+.asker {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 100%;
+}
+
+input {
+   border: 0.1rem solid black;
+   outline: none;
+   padding: 10px;
+   color: #000000;
+   font-size: 1rem;
+   background-color: #ffffff;
+   width: 34.5rem;
+}
+
+input:focus {
+   outline: none;
+   border-color: black;
+   color: rgb(0, 0, 0);
+}
+
+.question {
+   margin: 0;
+}
+
+hr {
+   width: 100%;
+   border: 0;
+   border-top: 0.1rem solid black; /* Solid black line */
+   margin-bottom: 1rem;
+}
+
+.nav {
+   position: absolute;
+   top: 2rem;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   width: calc(100% - 4rem);
+   justify-content: space-between;
+   text-transform: uppercase;
+   color: var(--secondary2);
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   transition: 0.5s;
+}
+
+#nav_1 {
+   text-align: left;
+}
+
+#nav_2 {
+   text-align: center;
+   flex-grow: 1; /* This will make it take up available space */
+}
+
+#nav_3 {
+   text-align: right;
+}
+
+.nav h1 {
+   padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#canvas-container {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start; /* Align the canvas to the top */
+   position: absolute;
+   top: 5rem; /* Adjust this value as needed to move the canvas down */
+   left: 0;
+   width: 100vw;
+   overflow: hidden;
+   margin: 0;
+   padding: 0;
+}
+
+.bg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   z-index: -1;
+}
+
+.guide {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   z-index: 100;
+   width: 20rem;
+   height: 12rem;
+   padding: 0.5rem;
+   background-color: rgba(68, 68, 68, 0.745);
+   left: 50%;
+   top: 42%; 
+   transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+   transition: 0.5s;
+   display: none;
+}
+
+.guide h1 {
+   font-size: 1.1rem;
+   text-align: center;
+}
+
+.type {
+   display: flex;
+}
+
+button {
+   border: none;
+   border: 0.1rem solid black;
+   outline: none;
+   padding: 10px;
+   color: #000000;
+   font-size: 1rem;
+   background-color: #ffffff;
+   border-left: none;
+}
